@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Pocket Director Updates</title>
+    <link>https://julieng42.github.io/GetPocketDirector/appcast.xml</link>
+    <description>Public Sparkle update feed for Pocket Director.</description>
+    <language>fr</language>
+  </channel>
+</rss>
