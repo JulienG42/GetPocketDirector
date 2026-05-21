@@ -195,6 +195,18 @@
         margin: 0;
       }
 
+      .footer-copy {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .footer-logo {
+        display: block;
+        width: 118px;
+        height: auto;
+      }
+
       @media (max-width: 600px) {
         body {
           font-size: 16px;
@@ -225,6 +237,12 @@
         .footer-inner {
           flex-direction: column;
           align-items: flex-start;
+        }
+
+        .footer-copy {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
         }
       }
     </style>
@@ -596,8 +614,17 @@
 
     <footer>
       <div class="footer-inner">
-        <p>Pocket Director</p>
-        <p>© Julien GUIA / OstiumCréa</p>
+        <div class="footer-copy">
+          <p>Pocket Director</p>
+          <p>© Julien GUIA / OstiumCréa</p>
+        </div>
+        <img
+          class="footer-logo"
+          src="./assets/ostiumcrea-logo.png"
+          width="720"
+          height="114"
+          alt="OstiumCréa"
+        >
       </div>
     </footer>
   </body>
