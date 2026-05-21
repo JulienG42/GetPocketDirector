@@ -207,6 +207,10 @@
         height: auto;
       }
 
+      .footer-logo-link {
+        display: block;
+      }
+
       @media (max-width: 600px) {
         body {
           font-size: 16px;
@@ -618,13 +622,15 @@
           <p>Pocket Director</p>
           <p>© Julien GUIA / OstiumCréa</p>
         </div>
-        <img
-          class="footer-logo"
-          src="./assets/ostiumcrea-logo.png"
-          width="720"
-          height="114"
-          alt="OstiumCréa"
-        >
+        <a class="footer-logo-link" href="https://ostiumcrea.fr" aria-label="OstiumCréa website">
+          <img
+            class="footer-logo"
+            src="./assets/ostiumcrea-logo.png"
+            width="720"
+            height="114"
+            alt="OstiumCréa"
+          >
+        </a>
       </div>
     </footer>
   </body>
