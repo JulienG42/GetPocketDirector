@@ -5,5 +5,18 @@
     <link>https://julieng42.github.io/GetPocketDirector/appcast.xml</link>
     <description>Public Sparkle update feed for Pocket Director.</description>
     <language>fr</language>
+    <item>
+      <title>Pocket Director 0.2 beta</title>
+      <sparkle:version>14</sparkle:version>
+      <sparkle:shortVersionString>0.2</sparkle:shortVersionString>
+      <pubDate>Sun, 24 May 2026 12:50:00 +0200</pubDate>
+      <enclosure
+        url="https://github.com/JulienG42/GetPocketDirector/releases/download/v0.2-b14/PocketDirector.0.2.dmg"
+        sparkle:edSignature="rJP6QOTiBb5quoOaNt+nFeHUob/dS6RmSLsCboziYmHmIvOvMTOV0LoX+E6gruYRQm2VB5RFmFCCMhPjLMY5AA=="
+        sparkle:version="14"
+        sparkle:shortVersionString="0.2"
+        length="2836586"
+        type="application/octet-stream" />
+    </item>
   </channel>
 </rss>
