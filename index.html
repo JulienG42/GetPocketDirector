@@ -257,6 +257,14 @@
         color: var(--secondary-text);
       }
 
+      .changelog-panel {
+        max-width: 820px;
+        padding: clamp(26px, 4vw, 38px);
+        border: 1px solid rgba(95, 75, 219, 0.14);
+        border-radius: 8px;
+        background: rgba(95, 75, 219, 0.055);
+      }
+
       .changelog-header {
         display: flex;
         align-items: baseline;
@@ -564,47 +572,49 @@
       </section>
 
       <section class="content-section" id="changelog" aria-labelledby="changelog-title">
-        <div class="changelog-header">
-          <h2 id="changelog-title">Changelog</h2>
-          <p class="changelog-version">0.2 beta</p>
-        </div>
-        <div class="changelog-copy">
-          <p>
-            Pocket Director s’organise autour de quatre espaces : Conditions, Tournages,
-            Préparation et Documents.
-          </p>
-          <p>
-            L’onglet Conditions permet de consulter la météo, la lumière du jour, les
-            horaires de golden hour et blue hour, ainsi qu’une recommandation de balance
-            des blancs adaptée au lieu et au moment.
-          </p>
-          <p>
-            L’application affiche aussi des conseils simples pour ajuster sa prise de vue
-            selon les nuages, l’heure, la température de couleur et l’éventuel besoin d’un
-            filtre ND.
-          </p>
-          <p>
-            L’onglet Tournages permet de créer des projets avec une date, un lieu, une
-            description, un aperçu des conditions, du matériel prévu et des plans à
-            tourner.
-          </p>
-          <p>
-            L’onglet Préparation permet de gérer son matériel, de l’ajouter à un tournage,
-            de créer des éléments ponctuels et de cocher ce qui est prêt avant le départ.
-          </p>
-          <p>
-            Le nouvel onglet Documents permet de rassembler les autorisations, droits à
-            l’image, permis, contrats, feuilles de service et documents utiles avant un
-            tournage.
-          </p>
-          <p>
-            Des ajouts rapides facilitent la préparation administrative avec des modèles
-            de documents à obtenir, imprimer ou traiter.
-          </p>
-          <p>
-            Pocket Director intègre une navigation native macOS et une sauvegarde locale
-            des données.
-          </p>
+        <div class="changelog-panel">
+          <div class="changelog-header">
+            <h2 id="changelog-title">Changelog</h2>
+            <p class="changelog-version">0.2 beta</p>
+          </div>
+          <div class="changelog-copy">
+            <p>
+              Pocket Director s’organise autour de quatre espaces : Conditions, Tournages,
+              Préparation et Documents.
+            </p>
+            <p>
+              L’onglet Conditions permet de consulter la météo, la lumière du jour, les
+              horaires de golden hour et blue hour, ainsi qu’une recommandation de balance
+              des blancs adaptée au lieu et au moment.
+            </p>
+            <p>
+              L’application affiche aussi des conseils simples pour ajuster sa prise de vue
+              selon les nuages, l’heure, la température de couleur et l’éventuel besoin d’un
+              filtre ND.
+            </p>
+            <p>
+              L’onglet Tournages permet de créer des projets avec une date, un lieu, une
+              description, un aperçu des conditions, du matériel prévu et des plans à
+              tourner.
+            </p>
+            <p>
+              L’onglet Préparation permet de gérer son matériel, de l’ajouter à un tournage,
+              de créer des éléments ponctuels et de cocher ce qui est prêt avant le départ.
+            </p>
+            <p>
+              Le nouvel onglet Documents permet de rassembler les autorisations, droits à
+              l’image, permis, contrats, feuilles de service et documents utiles avant un
+              tournage.
+            </p>
+            <p>
+              Des ajouts rapides facilitent la préparation administrative avec des modèles
+              de documents à obtenir, imprimer ou traiter.
+            </p>
+            <p>
+              Pocket Director intègre une navigation native macOS et une sauvegarde locale
+              des données.
+            </p>
+          </div>
         </div>
       </section>
 
