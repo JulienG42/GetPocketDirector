@@ -1,28 +1,15 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Télécharger Pocket Director, assistant macOS de préparation pour les tournages indépendants."
+      content="Download Pocket Director, a macOS preparation assistant for independent shoots."
     >
-    <title>Télécharger Pocket Director</title>
+    <title>Download Pocket Director</title>
     <link rel="alternate" hreflang="fr" href="./">
     <link rel="alternate" hreflang="en" href="./en.html">
-    <script>
-      (() => {
-        const preferredLanguage =
-          (navigator.languages && navigator.languages[0]) || navigator.language || "";
-        const primaryLanguage = preferredLanguage.split("-")[0].toLowerCase();
-        const searchParams = new URLSearchParams(window.location.search);
-        const keepFrench = searchParams.get("lang") === "fr";
-
-        if (!keepFrench && primaryLanguage && primaryLanguage !== "fr") {
-          window.location.replace("./en.html");
-        }
-      })();
-    </script>
     <style>
       :root {
         color-scheme: light;
@@ -492,11 +479,11 @@
   </head>
   <body>
     <header class="site-header">
-      <nav class="site-nav" aria-label="Navigation principale">
-        <a class="product-name" href="./">Pocket Director</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="product-name" href="./en.html">Pocket Director</a>
         <ul class="nav-links">
           <li><a href="#changelog">Changelog</a></li>
-          <li><a href="./legal.html">Mentions légales</a></li>
+          <li><a href="./legal.html#en">Legal notice</a></li>
         </ul>
       </nav>
     </header>
@@ -509,90 +496,87 @@
             src="./assets/pocket-director-app-source.png"
             width="192"
             height="192"
-            alt="Icône de Pocket Director"
+            alt="Pocket Director app icon"
           >
         </div>
         <div class="hero-copy">
           <p class="version">Version 0.2 beta</p>
           <h1 id="page-title">Pocket Director</h1>
           <p class="hero-summary">
-            Pocket Director est l’assistant de préparation pensé pour les tournages
-            indépendants.
+            Pocket Director is the preparation assistant designed for independent shoots.
           </p>
           <div class="download-actions">
             <a
               class="download-button"
               href="https://github.com/JulienG42/GetPocketDirector/releases/download/v0.2-b14/PocketDirector.0.2.dmg"
             >
-              Télécharger pour macOS
+              Download for macOS
             </a>
             <p class="download-meta">DMG macOS · 0.2 beta</p>
           </div>
-          <div class="app-details" aria-label="Informations de compatibilité">
-            <p><strong>Compatibilité :</strong> macOS Sonoma 14.0 ou version ultérieure.</p>
-            <p><strong>Langues :</strong> Français, Anglais, Espagnol, Allemand, Italien, Portugais.</p>
+          <div class="app-details" aria-label="Compatibility information">
+            <p><strong>Compatibility:</strong> macOS Sonoma 14.0 or later.</p>
+            <p><strong>Languages:</strong> French, English, Spanish, German, Italian, Portuguese.</p>
           </div>
         </div>
       </section>
 
       <section class="content-section" aria-labelledby="description-title">
         <div class="intro-copy">
-          <h2 id="description-title">Préparer un tournage sans se disperser</h2>
+          <h2 id="description-title">Plan a shoot without scattered tools</h2>
           <p>
-            Prépare tes vidéos plus simplement grâce à une application qui rassemble les
-            conditions de lumière, la météo, les tournages, le matériel, les checklists
-            et les documents importants au même endroit.
+            Prepare your videos more simply with an app that brings lighting conditions,
+            weather, shoots, equipment, checklists, and important documents together in one
+            place.
           </p>
           <p>
-            Que tu prépares une interview, une vidéo pour les réseaux sociaux, un
-            court-métrage, un reportage ou une captation événementielle, Pocket Director
-            t’aide à anticiper ce qu’il faut vérifier avant de tourner.
+            Whether you are preparing an interview, a social media video, a short film, a
+            report, or an event capture, Pocket Director helps you anticipate what needs to
+            be checked before shooting.
           </p>
           <p>
-            L’application affiche les conditions utiles pour la prise de vue : météo,
-            température, humidité, couverture nuageuse, lever et coucher du soleil,
-            golden hour, blue hour et recommandation de balance des blancs. Des conseils
-            simples t’aident à adapter tes réglages selon la lumière, l’heure et les
-            conditions du moment.
+            The app displays useful shooting conditions: weather, temperature, humidity,
+            cloud cover, sunrise and sunset, golden hour, blue hour, and white balance
+            recommendation. Simple tips help you adapt your settings based on the light,
+            time, and current conditions.
           </p>
           <p>
-            Pocket Director permet aussi de créer des tournages avec une date, un lieu,
-            une description, du matériel prévu et des plans à tourner. La section
-            Préparation t’aide à gérer ton matériel, à l’ajouter à un tournage et à
-            cocher ce qui est prêt avant le départ.
+            Pocket Director also lets you create shoots with a date, location,
+            description, planned equipment, and shots to capture. The Preparation section
+            helps you manage your equipment, add it to a shoot, and check what is ready
+            before leaving.
           </p>
           <p>
-            Une section Documents permet de rassembler les éléments administratifs
-            importants : autorisations, droits à l’image, permis, contrats, feuilles de
-            service ou documents à imprimer avant le tournage.
+            A Documents section brings together important admin items: authorizations,
+            image rights, permits, contracts, call sheets, or documents to print before
+            the shoot.
           </p>
         </div>
       </section>
 
       <section class="content-section" aria-labelledby="features-title">
-        <h2 id="features-title">Fonctionnalités principales</h2>
+        <h2 id="features-title">Main features</h2>
         <ul class="feature-list">
-          <li>Météo et conditions lumineuses pour la prise de vue</li>
-          <li>Golden hour, blue hour, lever et coucher du soleil</li>
-          <li>Recommandation de balance des blancs</li>
-          <li>Conseils simples selon les conditions de tournage</li>
-          <li>Création et gestion de tournages</li>
-          <li>Liste de plans à tourner</li>
-          <li>Gestion du matériel</li>
-          <li>Checklist de préparation</li>
-          <li>Documents utiles à obtenir, traiter ou imprimer</li>
-          <li>Sauvegarde locale des données</li>
-          <li>Interface native macOS claire et moderne</li>
+          <li>Weather and lighting conditions for shooting</li>
+          <li>Golden hour, blue hour, sunrise and sunset</li>
+          <li>White balance recommendation</li>
+          <li>Simple tips based on shooting conditions</li>
+          <li>Shoot creation and management</li>
+          <li>Shot list</li>
+          <li>Equipment management</li>
+          <li>Preparation checklist</li>
+          <li>Useful documents to obtain, process, or print</li>
+          <li>Local data storage</li>
+          <li>Clear, modern native macOS interface</li>
         </ul>
       </section>
 
       <section class="content-section" aria-labelledby="closing-title">
         <div class="intro-copy">
-          <h2 id="closing-title">Garder le contrôle avant de tourner</h2>
+          <h2 id="closing-title">Stay in control before shooting</h2>
           <p>
-            Pocket Director ne remplace pas ton regard créatif. Il t’aide simplement à ne
-            rien oublier, à mieux préparer tes tournages et à prendre de meilleures
-            décisions avant d’appuyer sur REC.
+            Pocket Director does not replace your creative eye. It simply helps you forget
+            less, prepare your shoots better, and make better decisions before pressing REC.
           </p>
         </div>
       </section>
@@ -605,226 +589,217 @@
           </div>
           <div class="changelog-copy">
             <p>
-              Pocket Director s’organise autour de quatre espaces : Conditions, Tournages,
-              Préparation et Documents.
+              Pocket Director is organized around four areas: Conditions, Shoots,
+              Preparation, and Documents.
             </p>
             <p>
-              L’onglet Conditions permet de consulter la météo, la lumière du jour, les
-              horaires de golden hour et blue hour, ainsi qu’une recommandation de balance
-              des blancs adaptée au lieu et au moment.
+              The Conditions tab lets you check weather, daylight, golden hour and blue
+              hour times, as well as a white balance recommendation adapted to the place
+              and time.
             </p>
             <p>
-              L’application affiche aussi des conseils simples pour ajuster sa prise de vue
-              selon les nuages, l’heure, la température de couleur et l’éventuel besoin d’un
-              filtre ND.
+              The app also displays simple tips to adjust your shooting according to
+              clouds, time of day, color temperature, and any possible need for an ND
+              filter.
             </p>
             <p>
-              L’onglet Tournages permet de créer des projets avec une date, un lieu, une
-              description, un aperçu des conditions, du matériel prévu et des plans à
-              tourner.
+              The Shoots tab lets you create projects with a date, location, description,
+              conditions preview, planned equipment, and shots to capture.
             </p>
             <p>
-              L’onglet Préparation permet de gérer son matériel, de l’ajouter à un tournage,
-              de créer des éléments ponctuels et de cocher ce qui est prêt avant le départ.
+              The Preparation tab lets you manage your equipment, add it to a shoot, create
+              one-off items, and check what is ready before leaving.
             </p>
             <p>
-              Le nouvel onglet Documents permet de rassembler les autorisations, droits à
-              l’image, permis, contrats, feuilles de service et documents utiles avant un
-              tournage.
+              The new Documents tab lets you gather authorizations, image rights, permits,
+              contracts, call sheets, and useful documents before a shoot.
             </p>
             <p>
-              Des ajouts rapides facilitent la préparation administrative avec des modèles
-              de documents à obtenir, imprimer ou traiter.
+              Quick additions make admin preparation easier with document templates to
+              obtain, print, or process.
             </p>
             <p>
-              Pocket Director intègre une navigation native macOS et une sauvegarde locale
-              des données.
+              Pocket Director includes native macOS navigation and local data storage.
             </p>
           </div>
         </div>
       </section>
 
       <section class="content-section" id="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title">Questions fréquentes</h2>
+        <h2 id="faq-title">Frequently asked questions</h2>
         <div class="faq-list">
           <details class="faq-item">
-            <summary class="faq-question">À quoi sert Pocket Director ?</summary>
+            <summary class="faq-question">What is Pocket Director for?</summary>
             <div class="faq-answer">
               <p>
-                Pocket Director est une application macOS pensée pour aider à préparer des
-                tournages indépendants. Elle rassemble les conditions météo, la lumière du
-                jour, les horaires de golden hour et blue hour, les recommandations de
-                balance des blancs, les tournages, les checklists, le matériel et les
-                documents utiles avant une prise de vue.
+                Pocket Director is a macOS app designed to help prepare independent
+                shoots. It brings together weather conditions, daylight, golden hour and
+                blue hour times, white balance recommendations, shoots, checklists,
+                equipment, and useful documents before filming.
               </p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              Pocket Director remplace-t-il un chef opérateur ou un assistant réalisateur ?
+              Does Pocket Director replace a cinematographer or assistant director?
             </summary>
             <div class="faq-answer">
               <p>
-                Non. Pocket Director ne remplace pas l’expérience humaine ni les choix
-                artistiques. L’application fournit des repères pratiques pour mieux
-                anticiper un tournage, éviter les oublis et prendre de meilleures décisions
-                avant de filmer.
+                No. Pocket Director does not replace human experience or artistic choices.
+                The app provides practical reference points to better anticipate a shoot,
+                avoid forgetting things, and make better decisions before filming.
               </p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              L’application collecte-t-elle des données personnelles ?
+              Does the app collect personal data?
             </summary>
             <div class="faq-answer">
               <p>
-                Pocket Director ne collecte pas de données de télémétrie. L’application ne
-                suit pas votre utilisation, n’intègre pas d’outil d’analyse comportementale
-                et ne transmet pas de statistiques d’usage à l’éditeur.
+                Pocket Director does not collect telemetry data. The app does not track
+                your usage, does not include behavioral analytics tools, and does not send
+                usage statistics to the publisher.
               </p>
               <p>
-                Certaines données peuvent toutefois être utilisées localement pour faire
-                fonctionner l’application : vos tournages, checklists, matériel, plans,
-                documents, préférences ou lieux saisis.
+                Some data may however be used locally to make the app work: your shoots,
+                checklists, equipment, plans, documents, preferences, or entered locations.
               </p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              Mes données sont-elles envoyées à des serveurs externes ?
+              Is my data sent to external servers?
             </summary>
             <div class="faq-answer">
               <p>
-                Les données créées dans l’application sont d’abord sauvegardées localement
-                sur votre appareil.
+                Data created in the app is first saved locally on your device.
               </p>
               <p>
-                Si la synchronisation iCloud est disponible et activée, certaines données
-                peuvent être synchronisées via iCloud / CloudKit afin de les retrouver sur
-                vos appareils Apple compatibles. Ces données restent associées à votre
-                compte iCloud et sont gérées par les services Apple.
+                If iCloud synchronization is available and enabled, some data may be synced
+                through iCloud / CloudKit so you can find it on your compatible Apple
+                devices. This data remains associated with your iCloud account and is
+                managed by Apple services.
               </p>
               <p>
-                Pocket Director ne vend pas vos données et ne les utilise pas à des fins
-                publicitaires.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">Pourquoi l’application demande-t-elle la localisation ?</summary>
-            <div class="faq-answer">
-              <p>
-                La localisation permet d’afficher les conditions météo et lumineuses
-                adaptées à votre position : météo, couverture nuageuse, lever et coucher du
-                soleil, golden hour, blue hour et recommandation de balance des blancs.
-              </p>
-              <p>
-                Vous pouvez refuser l’accès à la localisation. Dans ce cas, il est possible
-                de rechercher manuellement une ville ou une adresse.
+                Pocket Director does not sell your data and does not use it for advertising
+                purposes.
               </p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Puis-je utiliser Pocket Director sans iCloud ?</summary>
+            <summary class="faq-question">Why does the app ask for location access?</summary>
             <div class="faq-answer">
               <p>
-                Oui. Pocket Director est pensé pour fonctionner en local. iCloud sert
-                uniquement à synchroniser les données lorsque cette fonctionnalité est
-                disponible. L’application doit rester utilisable même si vous n’êtes pas
-                connecté à iCloud ou si la synchronisation est temporairement indisponible.
+                Location access makes it possible to display weather and lighting
+                conditions adapted to your position: weather, cloud cover, sunrise and
+                sunset, golden hour, blue hour, and white balance recommendation.
+              </p>
+              <p>
+                You can refuse location access. In that case, you can manually search for a
+                city or address.
               </p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Comment supprimer mes données ?</summary>
+            <summary class="faq-question">Can I use Pocket Director without iCloud?</summary>
             <div class="faq-answer">
               <p>
-                Les données peuvent être supprimées depuis les réglages de l’application,
-                via l’option de gestion des données.
-              </p>
-              <p>
-                La suppression complète efface les données locales de Pocket Director et
-                peut également supprimer les données synchronisées avec iCloud lorsque cette
-                synchronisation est disponible.
+                Yes. Pocket Director is designed to work locally. iCloud is only used to
+                sync data when this feature is available. The app should remain usable even
+                if you are not signed in to iCloud or if synchronization is temporarily
+                unavailable.
               </p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Comment les mises à jour sont-elles installées ?</summary>
+            <summary class="faq-question">How do I delete my data?</summary>
             <div class="faq-answer">
               <p>
-                Pour la version macOS distribuée hors App Store, Pocket Director peut
-                utiliser un système de mise à jour intégré afin de vérifier si une nouvelle
-                version est disponible et proposer son installation.
+                Data can be deleted from the app settings, through the data management
+                option.
               </p>
               <p>
-                Si l’application est distribuée via l’App Store à l’avenir, les mises à
-                jour passeront par le système habituel d’Apple.
+                Complete deletion removes Pocket Director local data and may also delete
+                data synchronized with iCloud when that synchronization is available.
               </p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Est-ce que Pocket Director fonctionne hors connexion ?</summary>
+            <summary class="faq-question">How are updates installed?</summary>
             <div class="faq-answer">
               <p>
-                Oui, une partie de l’application peut fonctionner hors connexion, notamment
-                les tournages, checklists, matériel, plans et documents déjà enregistrés.
+                For the macOS version distributed outside the App Store, Pocket Director may
+                use an integrated update system to check whether a new version is available
+                and offer to install it.
               </p>
               <p>
-                Certaines fonctionnalités nécessitent toutefois une connexion internet,
-                comme la récupération des données météo, la recherche de lieux ou la
-                synchronisation iCloud.
+                If the app is distributed through the App Store in the future, updates will
+                go through Apple’s usual system.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Does Pocket Director work offline?</summary>
+            <div class="faq-answer">
+              <p>
+                Yes, part of the app can work offline, including shoots, checklists,
+                equipment, plans, and documents that have already been saved.
+              </p>
+              <p>
+                Some features still require an internet connection, such as retrieving
+                weather data, searching for places, or iCloud synchronization.
               </p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              Les recommandations météo et lumière sont-elles garanties ?
+              Are weather and lighting recommendations guaranteed?
             </summary>
             <div class="faq-answer">
               <p>
-                Non. Les informations affichées sont données à titre indicatif. Les
-                conditions réelles peuvent varier selon le lieu, l’heure, la météo,
-                l’environnement et le matériel utilisé.
+                No. The information displayed is provided for informational purposes only.
+                Real conditions may vary depending on the location, time, weather,
+                environment, and equipment used.
               </p>
               <p>
-                Pocket Director aide à préparer un tournage, mais il reste toujours utile
-                de vérifier les conditions sur place avant de filmer.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">Pocket Director est-il destiné aux professionnels ?</summary>
-            <div class="faq-answer">
-              <p>
-                Pocket Director est pensé d’abord pour les créateurs, vidéastes
-                indépendants, étudiants, petites équipes et tournages légers. L’objectif
-                est de proposer un outil simple et clair, sans complexité inutile.
-              </p>
-              <p>
-                Il peut aussi être utile à des profils plus expérimentés qui veulent
-                préparer rapidement un tournage sans ouvrir quinze outils différents.
+                Pocket Director helps prepare a shoot, but it is always useful to check
+                conditions on location before filming.
               </p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Une version iPhone est-elle prévue ?</summary>
+            <summary class="faq-question">Is Pocket Director intended for professionals?</summary>
             <div class="faq-answer">
               <p>
-                Pocket Director est d’abord développé pour macOS. Une version iPhone est
-                envisagée afin de retrouver ses tournages, checklists et informations
-                importantes directement sur le terrain.
+                Pocket Director is designed first for creators, independent videographers,
+                students, small crews, and lightweight shoots. The goal is to provide a
+                simple, clear tool without unnecessary complexity.
+              </p>
+              <p>
+                It can also be useful for more experienced profiles who want to prepare a
+                shoot quickly without opening fifteen different tools.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is an iPhone version planned?</summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director is first developed for macOS. An iPhone version is being
+                considered so you can access your shoots, checklists, and important
+                information directly in the field.
               </p>
             </div>
           </details>
@@ -837,7 +812,7 @@
         <div class="footer-copy">
           <p>Pocket Director</p>
           <p>© Julien GUIA / OstiumCréa</p>
-          <p><a href="./legal.html">Mentions légales</a></p>
+          <p><a href="./legal.html#en">Legal notice</a></p>
         </div>
         <a class="footer-logo-link" href="https://ostiumcrea.fr" aria-label="Site OstiumCréa">
           <img
