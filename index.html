@@ -277,6 +277,60 @@
         max-width: 760px;
       }
 
+      .faq-list {
+        max-width: 760px;
+        border-top: 1px solid var(--rule);
+      }
+
+      .faq-item {
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 22px 0;
+        color: var(--text);
+        font-size: 19px;
+        font-weight: 650;
+        line-height: 1.3;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .faq-question::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-question::after {
+        content: "⌄";
+        flex: 0 0 auto;
+        color: var(--accent);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        transition: transform 160ms ease;
+      }
+
+      .faq-item[open] .faq-question::after {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        padding: 0 0 24px;
+        color: var(--secondary-text);
+      }
+
+      .faq-answer p {
+        margin: 0 0 14px;
+      }
+
+      .faq-answer p:last-child {
+        margin-bottom: 0;
+      }
+
       footer {
         border-top: 1px solid var(--rule);
         color: var(--secondary-text);
@@ -382,6 +436,11 @@
         .feature-list {
           grid-template-columns: 1fr;
           gap: 0;
+        }
+
+        .faq-question {
+          gap: 16px;
+          font-size: 17px;
         }
 
         .changelog-header,
@@ -546,6 +605,193 @@
             Pocket Director intègre une navigation native macOS et une sauvegarde locale
             des données.
           </p>
+        </div>
+      </section>
+
+      <section class="content-section" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Questions fréquentes</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">À quoi sert Pocket Director ?</summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director est une application macOS pensée pour aider à préparer des
+                tournages indépendants. Elle rassemble les conditions météo, la lumière du
+                jour, les horaires de golden hour et blue hour, les recommandations de
+                balance des blancs, les tournages, les checklists, le matériel et les
+                documents utiles avant une prise de vue.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              Pocket Director remplace-t-il un chef opérateur ou un assistant réalisateur ?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Non. Pocket Director ne remplace pas l’expérience humaine ni les choix
+                artistiques. L’application fournit des repères pratiques pour mieux
+                anticiper un tournage, éviter les oublis et prendre de meilleures décisions
+                avant de filmer.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              L’application collecte-t-elle des données personnelles ?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director ne collecte pas de données de télémétrie. L’application ne
+                suit pas votre utilisation, n’intègre pas d’outil d’analyse comportementale
+                et ne transmet pas de statistiques d’usage à l’éditeur.
+              </p>
+              <p>
+                Certaines données peuvent toutefois être utilisées localement pour faire
+                fonctionner l’application : vos tournages, checklists, matériel, plans,
+                documents, préférences ou lieux saisis.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              Mes données sont-elles envoyées à des serveurs externes ?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Les données créées dans l’application sont d’abord sauvegardées localement
+                sur votre appareil.
+              </p>
+              <p>
+                Si la synchronisation iCloud est disponible et activée, certaines données
+                peuvent être synchronisées via iCloud / CloudKit afin de les retrouver sur
+                vos appareils Apple compatibles. Ces données restent associées à votre
+                compte iCloud et sont gérées par les services Apple.
+              </p>
+              <p>
+                Pocket Director ne vend pas vos données et ne les utilise pas à des fins
+                publicitaires.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Pourquoi l’application demande-t-elle la localisation ?</summary>
+            <div class="faq-answer">
+              <p>
+                La localisation permet d’afficher les conditions météo et lumineuses
+                adaptées à votre position : météo, couverture nuageuse, lever et coucher du
+                soleil, golden hour, blue hour et recommandation de balance des blancs.
+              </p>
+              <p>
+                Vous pouvez refuser l’accès à la localisation. Dans ce cas, il est possible
+                de rechercher manuellement une ville ou une adresse.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Puis-je utiliser Pocket Director sans iCloud ?</summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Pocket Director est pensé pour fonctionner en local. iCloud sert
+                uniquement à synchroniser les données lorsque cette fonctionnalité est
+                disponible. L’application doit rester utilisable même si vous n’êtes pas
+                connecté à iCloud ou si la synchronisation est temporairement indisponible.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Comment supprimer mes données ?</summary>
+            <div class="faq-answer">
+              <p>
+                Les données peuvent être supprimées depuis les réglages de l’application,
+                via l’option de gestion des données.
+              </p>
+              <p>
+                La suppression complète efface les données locales de Pocket Director et
+                peut également supprimer les données synchronisées avec iCloud lorsque cette
+                synchronisation est disponible.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Comment les mises à jour sont-elles installées ?</summary>
+            <div class="faq-answer">
+              <p>
+                Pour la version macOS distribuée hors App Store, Pocket Director peut
+                utiliser un système de mise à jour intégré afin de vérifier si une nouvelle
+                version est disponible et proposer son installation.
+              </p>
+              <p>
+                Si l’application est distribuée via l’App Store à l’avenir, les mises à
+                jour passeront par le système habituel d’Apple.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Est-ce que Pocket Director fonctionne hors connexion ?</summary>
+            <div class="faq-answer">
+              <p>
+                Oui, une partie de l’application peut fonctionner hors connexion, notamment
+                les tournages, checklists, matériel, plans et documents déjà enregistrés.
+              </p>
+              <p>
+                Certaines fonctionnalités nécessitent toutefois une connexion internet,
+                comme la récupération des données météo, la recherche de lieux ou la
+                synchronisation iCloud.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              Les recommandations météo et lumière sont-elles garanties ?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Non. Les informations affichées sont données à titre indicatif. Les
+                conditions réelles peuvent varier selon le lieu, l’heure, la météo,
+                l’environnement et le matériel utilisé.
+              </p>
+              <p>
+                Pocket Director aide à préparer un tournage, mais il reste toujours utile
+                de vérifier les conditions sur place avant de filmer.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Pocket Director est-il destiné aux professionnels ?</summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director est pensé d’abord pour les créateurs, vidéastes
+                indépendants, étudiants, petites équipes et tournages légers. L’objectif
+                est de proposer un outil simple et clair, sans complexité inutile.
+              </p>
+              <p>
+                Il peut aussi être utile à des profils plus expérimentés qui veulent
+                préparer rapidement un tournage sans ouvrir quinze outils différents.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Une version iPhone est-elle prévue ?</summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director est d’abord développé pour macOS. Une version iPhone est
+                envisagée afin de retrouver ses tournages, checklists et informations
+                importantes directement sur le terrain.
+              </p>
+            </div>
+          </details>
         </div>
       </section>
     </main>
