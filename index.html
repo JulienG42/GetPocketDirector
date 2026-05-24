@@ -317,18 +317,24 @@
         display: none;
       }
 
+      .faq-question::marker {
+        content: "";
+      }
+
       .faq-question::after {
-        content: "⌄";
+        content: "";
         flex: 0 0 auto;
-        color: var(--accent);
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 1;
-        transition: transform 160ms ease;
+        width: 0.48em;
+        height: 0.48em;
+        border-right: 2px solid var(--accent);
+        border-bottom: 2px solid var(--accent);
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+        transition: transform 180ms ease;
       }
 
       .faq-item[open] .faq-question::after {
-        transform: rotate(180deg);
+        transform: rotate(-135deg);
       }
 
       .faq-answer {
