@@ -102,8 +102,8 @@
 
       .download-hero {
         display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0;
+        grid-template-columns: minmax(0, 1fr) minmax(190px, 260px);
+        gap: clamp(48px, 7vw, 86px);
         align-items: center;
         min-height: calc(100vh - 52px);
         padding: clamp(64px, 10vw, 110px) 0 clamp(48px, 8vw, 84px);
@@ -113,28 +113,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        justify-self: start;
-        width: clamp(96px, 10vw, 116px);
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        width: clamp(190px, 21vw, 248px);
         aspect-ratio: 1;
-        margin-bottom: 28px;
+        transform: translateY(68px);
       }
 
-      .app-icon-stage::before {
-        display: block;
-        width: 100%;
-        aspect-ratio: 1;
-        border-radius: 26%;
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20128%20128'%3E%3Crect%20width='128'%20height='128'%20rx='30'%20fill='%23f8f7ff'/%3E%3Cpath%20d='M57%20100H43c-14%200-25-11-25-25V52c0-16%2013-29%2029-29h31c21%200%2038%2017%2038%2038H18'%20fill='none'%20stroke='%237a4cf4'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3Cpath%20d='M39%2023%2025%2061M69%2023%2047%2061M99%2031%2083%2061'%20fill='none'%20stroke='%237a4cf4'%20stroke-width='8'%20stroke-linecap='round'/%3E%3Ccircle%20cx='82'%20cy='82'%20r='27'%20fill='%2379edcf'%20fill-opacity='.9'/%3E%3Cpath%20d='M71%2071h20M71%2082h30M71%2093h20'%20fill='none'%20stroke='%23fff'%20stroke-width='5'%20stroke-linecap='round'/%3E%3C/svg%3E");
-        background-size: cover;
-        content: "";
-        filter: drop-shadow(0 18px 32px rgba(95, 75, 219, 0.14));
+      .hero-copy {
+        grid-column: 1;
+        grid-row: 1;
       }
 
       .app-icon {
-        display: none;
         width: 100%;
         height: auto;
         border-radius: 26%;
+        filter: drop-shadow(0 22px 46px rgba(95, 75, 219, 0.16));
       }
 
       .version {
@@ -351,6 +347,7 @@
 
         .download-hero {
           display: grid;
+          grid-template-columns: 1fr;
           align-items: flex-start;
           min-height: auto;
           padding: 58px 0 62px;
@@ -361,9 +358,17 @@
         }
 
         .app-icon-stage {
-          width: 92px;
+          grid-column: 1;
+          grid-row: 1;
+          width: 112px;
           margin-bottom: 22px;
           justify-self: start;
+          transform: none;
+        }
+
+        .hero-copy {
+          grid-column: 1;
+          grid-row: 2;
         }
 
         h1 {
@@ -405,17 +410,16 @@
 
     <main>
       <section class="download-hero" aria-labelledby="page-title">
-        <div class="app-icon-stage" role="img" aria-label="Icône de Pocket Director">
+        <div class="app-icon-stage">
           <img
             class="app-icon"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+            src="./assets/pocket-director-app.png"
             width="128"
             height="128"
-            alt=""
-            aria-hidden="true"
+            alt="Icône de Pocket Director"
           >
         </div>
-        <div>
+        <div class="hero-copy">
           <p class="version">Version 0.2 beta</p>
           <h1 id="page-title">Pocket Director</h1>
           <p class="hero-summary">
