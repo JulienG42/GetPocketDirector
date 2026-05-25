@@ -97,6 +97,29 @@
         text-underline-offset: 0.16em;
       }
 
+      .nav-links a.language-switch {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 26px;
+        padding: 0 9px;
+        border: 1px solid rgba(95, 75, 219, 0.26);
+        border-radius: 999px;
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+      }
+
+      .nav-links a.language-switch:hover,
+      .nav-links a.language-switch:focus-visible {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #ffffff;
+        text-decoration: none;
+      }
+
       main {
         width: min(calc(100% - 48px), var(--reading-width));
         margin: 0 auto;
@@ -417,7 +440,11 @@
         }
 
         .nav-links {
-          gap: 14px;
+          gap: 12px;
+        }
+
+        .nav-links a {
+          font-size: 12px;
         }
 
         .download-hero {
@@ -475,6 +502,19 @@
           gap: 8px;
         }
       }
+
+      @media (max-width: 420px) {
+        .site-nav {
+          flex-wrap: wrap;
+          min-height: auto;
+          padding: 10px 0;
+        }
+
+        .nav-links {
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
     </style>
   </head>
   <body>
@@ -484,6 +524,7 @@
         <ul class="nav-links">
           <li><a href="#changelog">Changelog</a></li>
           <li><a href="./legal.html#en">Legal notice</a></li>
+          <li><a class="language-switch" href="./?lang=fr" aria-label="View the French page">FR/EN</a></li>
         </ul>
       </nav>
     </header>
