@@ -459,6 +459,64 @@
         margin-bottom: 0;
       }
 
+      .feedback-section {
+        display: flex;
+        justify-content: center;
+        padding: clamp(38px, 6vw, 62px) 0 clamp(58px, 8vw, 82px);
+        border-top: 1px solid var(--rule);
+      }
+
+      .feedback-button {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        overflow: hidden;
+        padding: 0 24px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), #7b62ff);
+        box-shadow: 0 12px 24px rgba(95, 75, 219, 0.18);
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 650;
+        text-decoration: none;
+        transition: box-shadow 180ms ease, transform 180ms ease;
+      }
+
+      .feedback-button::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        bottom: -50%;
+        left: -72%;
+        width: 54%;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0.44),
+          rgba(255, 255, 255, 0)
+        );
+        transform: skewX(-18deg);
+        transition: left 480ms ease;
+      }
+
+      .feedback-button span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .feedback-button:hover,
+      .feedback-button:focus-visible {
+        box-shadow: 0 18px 34px rgba(95, 75, 219, 0.28);
+        transform: translateY(-2px);
+      }
+
+      .feedback-button:hover::after,
+      .feedback-button:focus-visible::after {
+        left: 118%;
+      }
+
       footer {
         border-top: 1px solid var(--rule);
         color: var(--secondary-text);
@@ -575,6 +633,16 @@
           font-size: 17px;
         }
 
+        .feedback-section {
+          padding: 42px 0 58px;
+        }
+
+        .feedback-button {
+          width: 100%;
+          min-height: 48px;
+          padding: 0 18px;
+        }
+
         .changelog-header,
         .footer-inner,
         .footer-copy {
@@ -591,6 +659,16 @@
         .features-section::before {
           animation: none;
           opacity: 0.28;
+          transform: none;
+        }
+
+        .feedback-button,
+        .feedback-button::after {
+          transition: none;
+        }
+
+        .feedback-button:hover,
+        .feedback-button:focus-visible {
           transform: none;
         }
       }
@@ -949,6 +1027,15 @@
             </div>
           </details>
         </div>
+      </section>
+
+      <section class="feedback-section" aria-label="Commentaires et signalement de bug">
+        <a
+          class="feedback-button"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSev2VL2R9jbj6y2UH0kJrRvevvztsZplIXH4ryHB8KrhnlbXQ/viewform"
+        >
+          <span>Laisser un commentaire ou signaler un bug</span>
+        </a>
       </section>
     </main>
 
