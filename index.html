@@ -271,6 +271,39 @@
         border-top: 1px solid var(--rule);
       }
 
+      .features-section {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .features-section > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .features-section::before {
+        content: "";
+        position: absolute;
+        top: 18%;
+        right: -26%;
+        z-index: 0;
+        width: min(680px, 92vw);
+        height: 360px;
+        border-radius: 999px;
+        background: radial-gradient(
+          ellipse at 54% 48%,
+          rgba(95, 75, 219, 0.28) 0%,
+          rgba(95, 75, 219, 0.17) 38%,
+          rgba(95, 75, 219, 0) 74%
+        );
+        filter: blur(64px);
+        opacity: 0.22;
+        pointer-events: none;
+        transform: translate3d(0, 8px, 0) scale(0.96);
+        animation: featuresGlowPulse 8.4s ease-in-out infinite;
+      }
+
       .intro-copy {
         max-width: 760px;
       }
@@ -293,6 +326,44 @@
         padding: 13px 0;
         border-top: 1px solid var(--rule);
         color: var(--secondary-text);
+      }
+
+      @keyframes featuresGlowPulse {
+        0%,
+        100% {
+          opacity: 0.16;
+          transform: translate3d(0, 8px, 0) scale(0.94);
+        }
+
+        13% {
+          opacity: 0.36;
+          transform: translate3d(-10px, 0, 0) scale(1.02);
+        }
+
+        27% {
+          opacity: 0.22;
+          transform: translate3d(8px, 10px, 0) scale(0.98);
+        }
+
+        43% {
+          opacity: 0.48;
+          transform: translate3d(-18px, -8px, 0) scale(1.08);
+        }
+
+        58% {
+          opacity: 0.26;
+          transform: translate3d(12px, 4px, 0) scale(1);
+        }
+
+        72% {
+          opacity: 0.52;
+          transform: translate3d(18px, -4px, 0) scale(1.1);
+        }
+
+        87% {
+          opacity: 0.2;
+          transform: translate3d(-6px, 12px, 0) scale(0.96);
+        }
       }
 
       .changelog-panel {
@@ -516,6 +587,14 @@
         }
       }
 
+      @media (prefers-reduced-motion: reduce) {
+        .features-section::before {
+          animation: none;
+          opacity: 0.28;
+          transform: none;
+        }
+      }
+
       @media (max-width: 420px) {
         .site-nav {
           flex-wrap: wrap;
@@ -610,7 +689,7 @@
         </div>
       </section>
 
-      <section class="content-section" aria-labelledby="features-title">
+      <section class="content-section features-section" aria-labelledby="features-title">
         <h2 id="features-title">Fonctionnalités principales</h2>
         <ul class="feature-list">
           <li>Météo et conditions lumineuses pour la prise de vue</li>
