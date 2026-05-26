@@ -42,11 +42,15 @@
       }
 
       html {
+        background: var(--page-background);
         scroll-behavior: smooth;
       }
 
       body {
+        position: relative;
         margin: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
         background: var(--page-background);
         color: var(--text);
         font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
@@ -55,6 +59,56 @@
         line-height: 1.55;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
+      }
+
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        z-index: 0;
+        pointer-events: none;
+        will-change: opacity, transform;
+      }
+
+      body::before {
+        inset: -26vh -22vw;
+        background:
+          radial-gradient(
+            ellipse at 18% 30%,
+            rgba(95, 75, 219, 0.3) 0%,
+            rgba(95, 75, 219, 0.16) 28%,
+            rgba(95, 75, 219, 0) 58%
+          ),
+          radial-gradient(
+            ellipse at 78% 48%,
+            rgba(123, 98, 255, 0.4) 0%,
+            rgba(123, 98, 255, 0.2) 31%,
+            rgba(123, 98, 255, 0) 62%
+          ),
+          radial-gradient(
+            ellipse at 48% 76%,
+            rgba(116, 232, 210, 0.18) 0%,
+            rgba(116, 232, 210, 0) 54%
+          );
+        filter: blur(78px);
+        opacity: 0.48;
+        transform: translate3d(-4vw, -2vh, 0) scale(1);
+        animation: pageGlowDrift 9.6s ease-in-out infinite;
+      }
+
+      body::after {
+        inset: -18vh -18vw;
+        background:
+          radial-gradient(
+            ellipse at 54% 46%,
+            rgba(95, 75, 219, 0.34) 0%,
+            rgba(95, 75, 219, 0.16) 34%,
+            rgba(95, 75, 219, 0) 68%
+          );
+        filter: blur(104px);
+        opacity: 0.3;
+        transform: translate3d(8vw, 3vh, 0) scale(0.98);
+        animation: pageGlowFlicker 5.8s ease-in-out infinite;
       }
 
       a {
@@ -134,6 +188,8 @@
       }
 
       main {
+        position: relative;
+        z-index: 1;
         width: min(calc(100% - 48px), var(--reading-width));
         margin: 0 auto;
       }
@@ -271,39 +327,6 @@
         border-top: 1px solid var(--rule);
       }
 
-      .features-section {
-        position: relative;
-        overflow: hidden;
-        isolation: isolate;
-      }
-
-      .features-section > * {
-        position: relative;
-        z-index: 1;
-      }
-
-      .features-section::before {
-        content: "";
-        position: absolute;
-        top: 18%;
-        right: -26%;
-        z-index: 0;
-        width: min(680px, 92vw);
-        height: 360px;
-        border-radius: 999px;
-        background: radial-gradient(
-          ellipse at 54% 48%,
-          rgba(95, 75, 219, 0.28) 0%,
-          rgba(95, 75, 219, 0.17) 38%,
-          rgba(95, 75, 219, 0) 74%
-        );
-        filter: blur(64px);
-        opacity: 0.22;
-        pointer-events: none;
-        transform: translate3d(0, 8px, 0) scale(0.96);
-        animation: featuresGlowPulse 8.4s ease-in-out infinite;
-      }
-
       .intro-copy {
         max-width: 760px;
       }
@@ -328,41 +351,74 @@
         color: var(--secondary-text);
       }
 
-      @keyframes featuresGlowPulse {
+      @keyframes pageGlowDrift {
         0%,
         100% {
-          opacity: 0.16;
-          transform: translate3d(0, 8px, 0) scale(0.94);
+          opacity: 0.38;
+          transform: translate3d(-4vw, -2vh, 0) scale(1);
         }
 
-        13% {
-          opacity: 0.36;
-          transform: translate3d(-10px, 0, 0) scale(1.02);
+        12% {
+          opacity: 0.68;
+          transform: translate3d(3vw, 1vh, 0) scale(1.05);
         }
 
         27% {
-          opacity: 0.22;
-          transform: translate3d(8px, 10px, 0) scale(0.98);
+          opacity: 0.44;
+          transform: translate3d(-1vw, 4vh, 0) scale(1.01);
         }
 
         43% {
-          opacity: 0.48;
-          transform: translate3d(-18px, -8px, 0) scale(1.08);
+          opacity: 0.78;
+          transform: translate3d(5vw, -3vh, 0) scale(1.11);
         }
 
         58% {
-          opacity: 0.26;
-          transform: translate3d(12px, 4px, 0) scale(1);
+          opacity: 0.46;
+          transform: translate3d(-5vw, 2vh, 0) scale(1.03);
         }
 
-        72% {
+        74% {
+          opacity: 0.72;
+          transform: translate3d(2vw, 5vh, 0) scale(1.08);
+        }
+
+        89% {
           opacity: 0.52;
-          transform: translate3d(18px, -4px, 0) scale(1.1);
+          transform: translate3d(-3vw, -1vh, 0) scale(1.02);
+        }
+      }
+
+      @keyframes pageGlowFlicker {
+        0%,
+        100% {
+          opacity: 0.22;
+          transform: translate3d(8vw, 3vh, 0) scale(0.98);
         }
 
-        87% {
-          opacity: 0.2;
-          transform: translate3d(-6px, 12px, 0) scale(0.96);
+        16% {
+          opacity: 0.5;
+          transform: translate3d(-2vw, 1vh, 0) scale(1.08);
+        }
+
+        31% {
+          opacity: 0.28;
+          transform: translate3d(4vw, -4vh, 0) scale(1.01);
+        }
+
+        49% {
+          opacity: 0.6;
+          transform: translate3d(-6vw, 3vh, 0) scale(1.14);
+        }
+
+        66% {
+          opacity: 0.34;
+          transform: translate3d(3vw, 5vh, 0) scale(1.04);
+        }
+
+        82% {
+          opacity: 0.55;
+          transform: translate3d(7vw, -2vh, 0) scale(1.1);
         }
       }
 
@@ -461,7 +517,7 @@
 
       .feedback-section {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         padding: clamp(38px, 6vw, 62px) 0 clamp(58px, 8vw, 82px);
         border-top: 1px solid var(--rule);
       }
@@ -518,6 +574,8 @@
       }
 
       footer {
+        position: relative;
+        z-index: 1;
         border-top: 1px solid var(--rule);
         color: var(--secondary-text);
         background: var(--surface);
@@ -656,10 +714,18 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .features-section::before {
+        body::before,
+        body::after {
           animation: none;
-          opacity: 0.28;
           transform: none;
+        }
+
+        body::before {
+          opacity: 0.46;
+        }
+
+        body::after {
+          opacity: 0.22;
         }
 
         .feedback-button,
@@ -767,7 +833,7 @@
         </div>
       </section>
 
-      <section class="content-section features-section" aria-labelledby="features-title">
+      <section class="content-section" aria-labelledby="features-title">
         <h2 id="features-title">Fonctionnalités principales</h2>
         <ul class="feature-list">
           <li>Météo et conditions lumineuses pour la prise de vue</li>
