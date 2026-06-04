@@ -6,6 +6,19 @@
     <description>Public Sparkle update feed for Pocket Director.</description>
     <language>fr</language>
     <item>
+      <title>Pocket Director 0.3 beta</title>
+      <sparkle:version>16</sparkle:version>
+      <sparkle:shortVersionString>0.3</sparkle:shortVersionString>
+      <pubDate>Thu, 04 Jun 2026 17:25:00 +0200</pubDate>
+      <enclosure
+        url="https://github.com/JulienG42/GetPocketDirector/releases/download/v0.3-b16/PocketDirector-0.3.dmg"
+        sparkle:edSignature="rca5Zo7zveIyCZkpNwMp4Qw28ZzkpASIkh7/5DhgaXCfgrZ915JtfX5ophXWgj3ryefKntWhUn926PlU9HygCA=="
+        sparkle:version="16"
+        sparkle:shortVersionString="0.3"
+        length="2889286"
+        type="application/octet-stream" />
+    </item>
+    <item>
       <title>Pocket Director 0.2 beta</title>
       <sparkle:version>14</sparkle:version>
       <sparkle:shortVersionString>0.2</sparkle:shortVersionString>
