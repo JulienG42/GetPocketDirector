@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Aide et réponses aux questions fréquentes sur Pocket Director pour iPhone, iPad et Mac."
+    >
+    <title>Aide Pocket Director</title>
+    <link rel="alternate" hreflang="fr" href="./help.html">
+    <link rel="alternate" hreflang="en" href="./help-en.html">
+    <link rel="stylesheet" href="./help.css">
+    <script>
+      (() => {
+        const preferredLanguage =
+          (navigator.languages && navigator.languages[0]) || navigator.language || "";
+        const primaryLanguage = preferredLanguage.split("-")[0].toLowerCase();
+        const searchParams = new URLSearchParams(window.location.search);
+        const keepFrench = searchParams.get("lang") === "fr";
+
+        if (!keepFrench && primaryLanguage && primaryLanguage !== "fr") {
+          window.location.replace("./help-en.html");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a class="product-name" href="./?lang=fr">Pocket Director</a>
+        <ul class="nav-links">
+          <li><a href="./?lang=fr#changelog">Changelog</a></li>
+          <li><a href="./help.html?lang=fr" aria-current="page">Aide</a></li>
+          <li><a href="./legal.html">Mentions légales</a></li>
+          <li>
+            <a
+              class="language-switch"
+              href="./help-en.html"
+              aria-label="Afficher l’aide en anglais"
+            >
+              FR/EN
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="help-hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Pocket Director 0.5 bêta</p>
+          <h1 id="page-title">Comment pouvons-nous vous aider&nbsp;?</h1>
+          <p class="hero-summary">
+            Retrouvez les réponses essentielles pour préparer vos tournages, gérer vos
+            projets et utiliser Pocket Director sur iPhone, iPad et Mac.
+          </p>
+        </div>
+        <img
+          class="hero-icon"
+          src="./assets/pocket-director-app-source.png"
+          width="128"
+          height="128"
+          alt=""
+        >
+      </section>
+
+      <section class="help-tools" aria-labelledby="search-label">
+        <div class="search-panel">
+          <label class="search-label" id="search-label" for="faq-search">
+            Rechercher dans l’aide
+          </label>
+          <input
+            class="search-input"
+            id="faq-search"
+            type="search"
+            placeholder="Exemple : iCloud, météo, checklist…"
+            autocomplete="off"
+            data-faq-search
+          >
+          <p
+            class="search-status"
+            aria-live="polite"
+            data-search-status
+            data-question-label="question"
+            data-questions-label="questions"
+            data-result-label="résultat"
+            data-results-label="résultats"
+          ></p>
+        </div>
+
+        <nav aria-label="Catégories d’aide">
+          <ul class="category-nav">
+            <li><a href="#premiers-pas">Premiers pas</a></li>
+            <li><a href="#meteo-lumiere">Météo et lumière</a></li>
+            <li><a href="#tournages">Tournages</a></li>
+            <li><a href="#preparation">Préparation</a></li>
+            <li><a href="#documents">Documents</a></li>
+            <li><a href="#magic-director">Magic Director</a></li>
+            <li><a href="#donnees">Données</a></li>
+            <li><a href="#accessibilite">Accessibilité</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section
+        class="faq-category"
+        id="premiers-pas"
+        aria-labelledby="premiers-pas-title"
+        data-faq-category
+      >
+        <h2 id="premiers-pas-title">Premiers pas</h2>
+        <p class="category-intro">
+          Compatibilité, navigation et réglages de base pour bien démarrer.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">À quoi sert Pocket Director&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director centralise la préparation d’un tournage : météo, lumière,
+                balance des blancs, projets, matériel, checklists, plans et documents
+                administratifs.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Sur quels appareils fonctionne Pocket Director&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director est disponible sur iPhone et iPad à partir d’iOS/iPadOS 18
+                ainsi que sur Mac à partir de macOS 14.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment naviguer dans l’application&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Sur iPhone et iPad, utilisez les onglets Accueil, Météo, Tournages,
+                Préparation et Documents. Sur Mac, ces sections sont accessibles depuis la
+                barre latérale.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              L’application fonctionne-t-elle sans Internet&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Les projets, checklists, plans et documents restent accessibles hors
+                ligne. Une connexion Internet est nécessaire pour la météo, la recherche de
+                lieux et la synchronisation iCloud.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Puis-je utiliser l’application sans autoriser la localisation&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Vous pouvez rechercher une ville ou une adresse manuellement dans la
+                page Météo.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment définir un lieu par défaut&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Affichez un lieu dans la page Météo puis utilisez l’icône d’épingle. Ce lieu
+                sera automatiquement réutilisé au prochain lancement de l’application.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="meteo-lumiere"
+        aria-labelledby="meteo-lumiere-title"
+        data-faq-category
+      >
+        <h2 id="meteo-lumiere-title">Météo et lumière</h2>
+        <p class="category-intro">
+          Comprendre les prévisions, les horaires de lumière et les recommandations caméra.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">D’où viennent les données météo&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Les prévisions météo et les informations astronomiques proviennent
+                d’Open-Meteo.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Que montre la page Météo&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                La température, l’humidité, la couverture nuageuse, le lever et le coucher
+                du soleil, les conditions lumineuses ainsi qu’une recommandation de balance
+                des blancs.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment consulter un autre lieu&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Saisissez une ville ou une adresse dans le champ de recherche puis
+                sélectionnez le lieu souhaité.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Comment revenir à ma position actuelle&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Utilisez le bouton de localisation situé à côté du champ de recherche.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">À quoi sert le curseur horaire&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Il permet de prévisualiser les conditions météo et lumineuses à différents
+                moments de la journée.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Que signifie la valeur en kelvins&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Il s’agit d’une recommandation de balance des blancs pour votre caméra. Elle
+                constitue un point de départ pour vos réglages sur le terrain.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Les recommandations remplacent-elles une mesure sur place&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Non. Les conditions réelles peuvent varier selon les sources lumineuses
+                présentes sur le lieu de tournage. Une vérification sur place reste
+                recommandée.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Comment consulter les golden hours et les heures bleues&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Utilisez le bouton «&nbsp;Golden hour&nbsp;» dans la page Météo pour
+                afficher les horaires recommandés.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              À quoi sert la recommandation de filtre ND&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Elle indique si l’utilisation d’un filtre ND pourrait être pertinente selon
+                les conditions lumineuses observées.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Pourquoi la météo ne se charge-t-elle pas&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Vérifiez votre connexion Internet puis réessayez. Vous pouvez également
+                rechercher manuellement une autre ville.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="tournages"
+        aria-labelledby="tournages-title"
+        data-faq-category
+      >
+        <h2 id="tournages-title">Tournages</h2>
+        <p class="category-intro">
+          Créer, organiser et mettre à jour vos projets de tournage.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment créer un tournage&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Ouvrez l’onglet Tournages puis choisissez «&nbsp;Nouveau projet&nbsp;».
+                Renseignez ensuite les informations souhaitées.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Puis-je créer un tournage sans date&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>Oui. La date reste facultative.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment modifier un tournage&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>Ouvrez sa fiche puis sélectionnez «&nbsp;Modifier&nbsp;».</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment ajouter des plans à tourner&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Depuis la fiche du projet, ouvrez la section Plans puis ajoutez les plans
+                souhaités.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Comment associer une checklist à un tournage&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Sélectionnez une préparation existante lors de la création ou de la
+                modification du projet.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Puis-je ajouter un tournage à l’application Calendrier&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Si le projet possède une date, vous pouvez l’ajouter à l’application
+                Calendrier depuis sa fiche.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Les modifications du projet mettent-elles automatiquement à jour l’événement
+              Calendrier&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Non. Les modifications effectuées dans Pocket Director ne modifient pas
+                automatiquement l’événement déjà créé dans Calendrier.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Que supprime la suppression d’un projet&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                La suppression retire le projet ainsi que les informations qui lui sont
+                associées. Les documents restent disponibles dans la bibliothèque
+                Documents.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="preparation"
+        aria-labelledby="preparation-title"
+        data-faq-category
+      >
+        <h2 id="preparation-title">Préparation et matériel</h2>
+        <p class="category-intro">
+          Construire votre parc matériel et préparer des checklists réutilisables.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Quelle différence entre «&nbsp;Mon matériel&nbsp;» et une checklist&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Mon matériel représente votre équipement habituel. Une checklist permet de
+                sélectionner uniquement les éléments nécessaires à un tournage précis.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment enregistrer mon matériel&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Dans Préparation, ajoutez un nouvel élément puis indiquez son nom, sa
+                catégorie et sa quantité.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Puis-je ajouter des tâches qui ne sont pas du matériel&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Une checklist peut également contenir des actions à réaliser avant un
+                tournage.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Comment indiquer qu’un élément est prêt&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Touchez ou cliquez sur le cercle situé devant son nom pour le marquer comme
+                prêt.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Puis-je réutiliser une checklist&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Une checklist peut être dupliquée afin de servir de base à un autre
+                tournage.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Que se passe-t-il si je modifie un élément de Mon matériel&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Les checklists utilisant cet équipement sont automatiquement mises à jour.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Que se passe-t-il si je supprime un élément de Mon matériel&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Il est retiré des checklists dans lesquelles il était utilisé.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="documents"
+        aria-labelledby="documents-title"
+        data-faq-category
+      >
+        <h2 id="documents-title">Documents</h2>
+        <p class="category-intro">
+          Suivre les pièces administratives et les fichiers utiles à vos tournages.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Quels documents puis-je suivre&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Permis de tournage, autorisations, droits à l’image, contrats, assurances,
+                feuilles de service et tout autre document utile à la préparation.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Puis-je lier un document à un tournage&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>Oui. Chaque document peut être associé à un projet spécifique.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Quels fichiers puis-je joindre&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Les formats PDF et Microsoft Word (.doc et .docx) sont pris en charge.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment joindre un fichier&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Utilisez l’action «&nbsp;Joindre&nbsp;» sur iPhone et iPad ou
+                glissez-déposez le fichier sur Mac.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Puis-je joindre plusieurs fichiers au même document&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>Non. Chaque document possède une seule pièce jointe à la fois.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment récupérer une pièce jointe&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Utilisez l’action de partage sur iPhone et iPad ou l’option de téléchargement
+                sur Mac.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Existe-t-il des modèles de documents&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Plusieurs modèles sont proposés sur Mac afin d’accélérer la préparation
+                administrative d’un tournage.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="magic-director"
+        aria-labelledby="magic-director-title"
+        data-faq-category
+      >
+        <h2 id="magic-director-title">Magic Director</h2>
+        <p class="category-intro">
+          Utiliser l’assistant local de préparation alimenté par Apple Intelligence.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Qu’est-ce que Magic Director&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Magic Director est un assistant de préparation capable de suggérer des
+                idées, des angles, des alternatives et des points de vigilance adaptés à
+                votre tournage.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Les demandes sont-elles envoyées à un serveur externe&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Non. Magic Director fonctionne directement sur l’appareil grâce à Apple
+                Intelligence.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Pourquoi Magic Director n’apparaît-il pas&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Cette fonctionnalité nécessite un appareil compatible avec Apple
+                Intelligence ainsi qu’une version compatible d’iOS, iPadOS ou macOS.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Quelles informations utilise-t-il&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Selon le contexte, Magic Director peut s’appuyer sur votre question, le lieu
+                affiché, la météo, vos tournages ou la checklist sélectionnée.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Puis-je retrouver mes anciennes conversations&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Oui. L’historique des échanges est disponible depuis l’écran d’accueil.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Puis-je désactiver Magic Director&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Cette fonctionnalité peut être désactivée depuis les paramètres de
+                l’application.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Magic Director peut-il se tromper&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Les suggestions générées ont vocation à assister la préparation d’un
+                tournage et ne remplacent pas le jugement du réalisateur ou de l’équipe
+                technique.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="donnees"
+        aria-labelledby="donnees-title"
+        data-faq-category
+      >
+        <h2 id="donnees-title">Données et synchronisation</h2>
+        <p class="category-intro">
+          Comprendre la sauvegarde locale, iCloud et la gestion de vos informations.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Quelles données sont synchronisées avec iCloud&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Les tournages, plans, préparations, matériel, documents et l’historique
+                Magic Director peuvent être synchronisés via iCloud.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Mes données sont-elles perdues si iCloud est temporairement
+              indisponible&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>Non. Une copie locale reste conservée sur votre appareil.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Puis-je désactiver la synchronisation iCloud&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Oui. Elle peut être désactivée depuis les paramètres de l’application.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Mes données sont-elles revendues ou analysées&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Non. Pocket Director ne contient aucun système publicitaire et ne revend
+                aucune donnée utilisateur.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Quelle différence entre réinitialiser les paramètres et supprimer toutes les
+              données&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                La réinitialisation restaure uniquement les préférences de l’application. La
+                suppression des données efface vos informations enregistrées.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="accessibilite"
+        aria-labelledby="accessibilite-title"
+        data-faq-category
+      >
+        <h2 id="accessibilite-title">Accessibilité et assistance</h2>
+        <p class="category-intro">
+          Adapter l’application à vos préférences et contacter le support.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Comment changer la langue ou les unités&nbsp;?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director prend en charge plusieurs langues ainsi que les formats
+                12&nbsp;h / 24&nbsp;h et °C / °F. Ces options sont disponibles dans les
+                paramètres.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment réduire les effets visuels&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Les paramètres d’accessibilité permettent de réduire les animations et
+                certains effets visuels.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Comment signaler un problème&nbsp;?</summary>
+            <div class="faq-answer">
+              <p>
+                Utilisez l’option «&nbsp;Signaler un problème&nbsp;» disponible dans les
+                paramètres de l’application afin de contacter le support.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <p class="no-results" data-no-results hidden>
+        Aucun résultat. Essayez un autre mot-clé ou parcourez les catégories ci-dessus.
+      </p>
+
+      <section class="support-section" aria-labelledby="support-title">
+        <div class="support-card">
+          <div class="support-copy">
+            <h2 id="support-title">Vous n’avez pas trouvé votre réponse&nbsp;?</h2>
+            <p>
+              Envoyez-nous votre question ou signalez un problème. Votre retour nous aide à
+              améliorer Pocket Director.
+            </p>
+          </div>
+          <a
+            class="support-button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSev2VL2R9jbj6y2UH0kJrRvevvztsZplIXH4ryHB8KrhnlbXQ/viewform"
+          >
+            Contacter le support
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-copy">
+          <p>Pocket Director</p>
+          <p>© 2026 Julien GUIA / OstiumCréa</p>
+          <p><a href="./help.html?lang=fr">Aide</a></p>
+          <p><a href="./legal.html">Mentions légales</a></p>
+        </div>
+        <a class="footer-logo-link" href="https://ostiumcrea.fr" aria-label="Site OstiumCréa">
+          <img
+            class="footer-logo"
+            src="./assets/ostiumcrea-logo.png"
+            width="720"
+            height="114"
+            alt="OstiumCréa"
+          >
+        </a>
+      </div>
+    </footer>
+
+    <script src="./help.js"></script>
+  </body>
+</html>

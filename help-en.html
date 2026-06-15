@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Help and answers to frequently asked questions about Pocket Director for iPhone, iPad, and Mac."
+    >
+    <title>Pocket Director Help</title>
+    <link rel="alternate" hreflang="fr" href="./help.html">
+    <link rel="alternate" hreflang="en" href="./help-en.html">
+    <link rel="stylesheet" href="./help.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="product-name" href="./en.html">Pocket Director</a>
+        <ul class="nav-links">
+          <li><a href="./en.html#changelog">Changelog</a></li>
+          <li><a href="./help-en.html" aria-current="page">Help</a></li>
+          <li><a href="./legal.html#en">Legal notice</a></li>
+          <li>
+            <a
+              class="language-switch"
+              href="./help.html?lang=fr"
+              aria-label="View help in French"
+            >
+              FR/EN
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="help-hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Pocket Director 0.5 beta</p>
+          <h1 id="page-title">How can we help?</h1>
+          <p class="hero-summary">
+            Find the essential answers for planning shoots, managing projects, and using
+            Pocket Director on iPhone, iPad, and Mac.
+          </p>
+        </div>
+        <img
+          class="hero-icon"
+          src="./assets/pocket-director-app-source.png"
+          width="128"
+          height="128"
+          alt=""
+        >
+      </section>
+
+      <section class="help-tools" aria-labelledby="search-label">
+        <div class="search-panel">
+          <label class="search-label" id="search-label" for="faq-search">
+            Search help
+          </label>
+          <input
+            class="search-input"
+            id="faq-search"
+            type="search"
+            placeholder="For example: iCloud, weather, checklist…"
+            autocomplete="off"
+            data-faq-search
+          >
+          <p
+            class="search-status"
+            aria-live="polite"
+            data-search-status
+            data-question-label="question"
+            data-questions-label="questions"
+            data-result-label="result"
+            data-results-label="results"
+          ></p>
+        </div>
+
+        <nav aria-label="Help categories">
+          <ul class="category-nav">
+            <li><a href="#getting-started">Getting started</a></li>
+            <li><a href="#weather-light">Weather and light</a></li>
+            <li><a href="#shoots">Shoots</a></li>
+            <li><a href="#preparation">Preparation</a></li>
+            <li><a href="#documents">Documents</a></li>
+            <li><a href="#magic-director">Magic Director</a></li>
+            <li><a href="#data">Data</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section
+        class="faq-category"
+        id="getting-started"
+        aria-labelledby="getting-started-title"
+        data-faq-category
+      >
+        <h2 id="getting-started-title">Getting started</h2>
+        <p class="category-intro">
+          Compatibility, navigation, and basic settings to help you get started.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">What is Pocket Director for?</summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director brings shoot preparation into one place: weather, light,
+                white balance, projects, equipment, checklists, shot lists, and
+                administrative documents.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Which devices support Pocket Director?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director is available on iPhone and iPad with iOS/iPadOS 18 or
+                later, and on Mac with macOS 14 or later.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I navigate the app?</summary>
+            <div class="faq-answer">
+              <p>
+                On iPhone and iPad, use the Home, Weather, Shoots, Preparation, and
+                Documents tabs. On Mac, these sections are available from the sidebar.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Does the app work without an Internet connection?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. Projects, checklists, shot lists, and documents remain available
+                offline. An Internet connection is required for weather, place search, and
+                iCloud synchronization.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Can I use the app without allowing location access?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. You can manually search for a city or address on the Weather page.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I set a default location?</summary>
+            <div class="faq-answer">
+              <p>
+                Display a location on the Weather page, then use the pin button. This
+                location will be used automatically the next time you open the app.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="weather-light"
+        aria-labelledby="weather-light-title"
+        data-faq-category
+      >
+        <h2 id="weather-light-title">Weather and light</h2>
+        <p class="category-intro">
+          Understand forecasts, natural-light times, and camera recommendations.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Where does the weather data come from?</summary>
+            <div class="faq-answer">
+              <p>
+                Weather forecasts and astronomical information are provided by Open-Meteo.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">What does the Weather page show?</summary>
+            <div class="faq-answer">
+              <p>
+                Temperature, humidity, cloud cover, sunrise and sunset, lighting
+                conditions, and a white balance recommendation.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I view another location?</summary>
+            <div class="faq-answer">
+              <p>
+                Enter a city or address in the search field, then select the location you
+                want.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              How do I return to my current location?
+            </summary>
+            <div class="faq-answer">
+              <p>Use the location button next to the search field.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">What is the time slider for?</summary>
+            <div class="faq-answer">
+              <p>
+                It lets you preview weather and lighting conditions at different times of
+                the day.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">What does the kelvin value mean?</summary>
+            <div class="faq-answer">
+              <p>
+                It is a white balance recommendation for your camera. Use it as a starting
+                point for your on-location settings.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Do the recommendations replace an on-location measurement?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No. Actual conditions may vary depending on the light sources present at
+                the shoot location. Checking conditions on location is still recommended.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              How do I view golden hours and blue hours?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Use the “Golden hour” button on the Weather page to display the recommended
+                times.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              What is the ND filter recommendation for?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                It indicates whether using an ND filter may be useful based on the observed
+                lighting conditions.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Why is the weather not loading?</summary>
+            <div class="faq-answer">
+              <p>
+                Check your Internet connection and try again. You can also manually search
+                for another city.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="shoots"
+        aria-labelledby="shoots-title"
+        data-faq-category
+      >
+        <h2 id="shoots-title">Shoots</h2>
+        <p class="category-intro">
+          Create, organize, and update your shoot projects.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I create a shoot?</summary>
+            <div class="faq-answer">
+              <p>
+                Open the Shoots tab, then choose “New project.” Enter the information you
+                want to include.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Can I create a shoot without a date?</summary>
+            <div class="faq-answer">
+              <p>Yes. The date is optional.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I edit a shoot?</summary>
+            <div class="faq-answer">
+              <p>Open its details, then select “Edit.”</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I add shots to capture?</summary>
+            <div class="faq-answer">
+              <p>
+                From the project details, open the Shot list section, then add the shots
+                you want.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I link a checklist to a shoot?</summary>
+            <div class="faq-answer">
+              <p>
+                Select an existing preparation when creating or editing the project.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Can I add a shoot to the Calendar app?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. If the project has a date, you can add it to the Calendar app from its
+                details.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Do project changes automatically update the Calendar event?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No. Changes made in Pocket Director do not automatically update an event
+                that has already been created in Calendar.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              What is removed when I delete a project?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Deleting removes the project and its associated information. Documents
+                remain available in the Documents library.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="preparation"
+        aria-labelledby="preparation-title"
+        data-faq-category
+      >
+        <h2 id="preparation-title">Preparation and equipment</h2>
+        <p class="category-intro">
+          Build your equipment library and prepare reusable checklists.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              What is the difference between “My equipment” and a checklist?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                My equipment represents the gear you regularly use. A checklist lets you
+                select only the items needed for a specific shoot.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I save my equipment?</summary>
+            <div class="faq-answer">
+              <p>
+                In Preparation, add a new item, then enter its name, category, and quantity.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Can I add tasks that are not equipment?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. A checklist can also include actions to complete before a shoot.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I mark an item as ready?</summary>
+            <div class="faq-answer">
+              <p>
+                Tap or click the circle in front of its name to mark it as ready.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Can I reuse a checklist?</summary>
+            <div class="faq-answer">
+              <p>
+                Yes. A checklist can be duplicated and used as the starting point for
+                another shoot.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              What happens if I edit an item in My equipment?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Checklists that use this equipment are updated automatically.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              What happens if I delete an item from My equipment?
+            </summary>
+            <div class="faq-answer">
+              <p>It is removed from every checklist where it was used.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="documents"
+        aria-labelledby="documents-title"
+        data-faq-category
+      >
+        <h2 id="documents-title">Documents</h2>
+        <p class="category-intro">
+          Track administrative documents and files that are useful for your shoots.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Which documents can I track?</summary>
+            <div class="faq-answer">
+              <p>
+                Filming permits, authorizations, image releases, contracts, insurance,
+                call sheets, and any other document useful for preparation.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Can I link a document to a shoot?</summary>
+            <div class="faq-answer">
+              <p>Yes. Each document can be linked to a specific project.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Which files can I attach?</summary>
+            <div class="faq-answer">
+              <p>PDF and Microsoft Word files (.doc and .docx) are supported.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I attach a file?</summary>
+            <div class="faq-answer">
+              <p>
+                Use the “Attach” action on iPhone and iPad, or drag and drop the file on
+                Mac.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Can I attach multiple files to the same document?
+            </summary>
+            <div class="faq-answer">
+              <p>No. Each document can have one attachment at a time.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I retrieve an attachment?</summary>
+            <div class="faq-answer">
+              <p>
+                Use the share action on iPhone and iPad or the download option on Mac.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Are document templates available?</summary>
+            <div class="faq-answer">
+              <p>
+                Yes. Several templates are available on Mac to speed up the administrative
+                preparation of a shoot.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="magic-director"
+        aria-labelledby="magic-director-title"
+        data-faq-category
+      >
+        <h2 id="magic-director-title">Magic Director</h2>
+        <p class="category-intro">
+          Use the local preparation assistant powered by Apple Intelligence.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">What is Magic Director?</summary>
+            <div class="faq-answer">
+              <p>
+                Magic Director is a preparation assistant that can suggest ideas, angles,
+                alternatives, and points to watch based on your shoot.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Are requests sent to an external server?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No. Magic Director runs directly on your device using Apple Intelligence.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Why is Magic Director not showing?</summary>
+            <div class="faq-answer">
+              <p>
+                This feature requires a device that supports Apple Intelligence and a
+                compatible version of iOS, iPadOS, or macOS.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Which information does it use?</summary>
+            <div class="faq-answer">
+              <p>
+                Depending on the context, Magic Director may use your question, the
+                displayed location, the weather, your shoots, or the selected checklist.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Can I access my previous conversations?
+            </summary>
+            <div class="faq-answer">
+              <p>Yes. Your conversation history is available from the Home screen.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Can I turn off Magic Director?</summary>
+            <div class="faq-answer">
+              <p>Yes. This feature can be disabled in the app settings.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Can Magic Director make mistakes?</summary>
+            <div class="faq-answer">
+              <p>
+                Yes. Generated suggestions are intended to assist with shoot preparation
+                and do not replace the judgment of the director or technical crew.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="data"
+        aria-labelledby="data-title"
+        data-faq-category
+      >
+        <h2 id="data-title">Data and synchronization</h2>
+        <p class="category-intro">
+          Understand local storage, iCloud, and the management of your information.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Which data is synchronized with iCloud?</summary>
+            <div class="faq-answer">
+              <p>
+                Shoots, shot lists, preparations, equipment, documents, and Magic Director
+                history can be synchronized through iCloud.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Is my data lost if iCloud is temporarily unavailable?
+            </summary>
+            <div class="faq-answer">
+              <p>No. A local copy remains stored on your device.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              Can I turn off iCloud synchronization?
+            </summary>
+            <div class="faq-answer">
+              <p>Yes. It can be disabled in the app settings.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">Is my data sold or analyzed?</summary>
+            <div class="faq-answer">
+              <p>
+                No. Pocket Director contains no advertising system and does not sell user
+                data.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              What is the difference between resetting settings and deleting all data?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Resetting restores only the app preferences. Deleting data erases your
+                saved information.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="faq-category"
+        id="accessibility"
+        aria-labelledby="accessibility-title"
+        data-faq-category
+      >
+        <h2 id="accessibility-title">Accessibility and support</h2>
+        <p class="category-intro">
+          Adapt the app to your preferences and contact support.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">
+              How do I change the language or units?
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Pocket Director supports multiple languages as well as 12-hour / 24-hour
+                time and °C / °F formats. These options are available in Settings.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I reduce visual effects?</summary>
+            <div class="faq-answer">
+              <p>
+                The accessibility settings let you reduce animations and certain visual
+                effects.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item" data-faq-item>
+            <summary class="faq-question">How do I report a problem?</summary>
+            <div class="faq-answer">
+              <p>
+                Use the “Report a problem” option in the app settings to contact support.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <p class="no-results" data-no-results hidden>
+        No results found. Try another keyword or browse the categories above.
+      </p>
+
+      <section class="support-section" aria-labelledby="support-title">
+        <div class="support-card">
+          <div class="support-copy">
+            <h2 id="support-title">Still looking for an answer?</h2>
+            <p>
+              Send us your question or report a problem. Your feedback helps us improve
+              Pocket Director.
+            </p>
+          </div>
+          <a
+            class="support-button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSev2VL2R9jbj6y2UH0kJrRvevvztsZplIXH4ryHB8KrhnlbXQ/viewform"
+          >
+            Contact support
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-copy">
+          <p>Pocket Director</p>
+          <p>© 2026 Julien GUIA / OstiumCréa</p>
+          <p><a href="./help-en.html">Help</a></p>
+          <p><a href="./legal.html#en">Legal notice</a></p>
+        </div>
+        <a class="footer-logo-link" href="https://ostiumcrea.fr" aria-label="OstiumCréa website">
+          <img
+            class="footer-logo"
+            src="./assets/ostiumcrea-logo.png"
+            width="720"
+            height="114"
+            alt="OstiumCréa"
+          >
+        </a>
+      </div>
+    </footer>
+
+    <script src="./help.js"></script>
+  </body>
+</html>
